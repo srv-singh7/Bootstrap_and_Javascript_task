@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Javascript TASK 6</title>
+</head>
+
+<body>
+
+    <center>
+        <style>
+            .box {
+                width: 350px;
+                height: 387px;
+                box-shadow: -8px 9px 23px -7px #928a8a;
+                background-color: rgb(237, 236, 236);
+                margin-top: 100px;
+            }
+
+            p {
+                font-size: 44px;
+                position: absolute;
+                top: 109px;
+                left: 540px;
+            }
+
+            input {
+                padding: 10px;
+                margin-top: 20px;
+                width: 275px;
+                position: relative;
+                top: 116px;
+            }
+
+            button {
+                width: 280px;
+                position: relative;
+                top: 138px;
+                color: white;
+                background-color: #2196F3;
+                padding: 13px;
+                font-size: 17px;
+                border-color: #2196F3;
+                border-radius: 2px;
+            }
+
+            .c1 {
+                display: inline-block;
+                position: relative;
+                top: 161px;
+                right: 118px;
+            }
+
+            .c2 {
+                position: relative;
+                right: 136px;
+                top: 116px;
+            }
+
+            a {
+                position: relative;
+                top: 105px;
+                left: 85px;
+                display: inline-block;
+            }
+
+            .c3 {
+                color: black;
+                font-size: 17px;
+                position: relative;
+                top: 141px;
+                left: -38px;
+
+            }
+
+            span {
+                color: red;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .c4 {
+                position: relative;
+                top: -32px;
+                right: 67px;
+                padding: 12px;
+                background-color: #928a8a;
+            }
+
+            .c5{
+                position: relative;
+                top: 27px;
+                right: 102px;
+                background-color: #928a8a;
+                padding: 12px;
+            }
+
+            ::placeholder {
+                padding-left: 35px;
+            }
+        </style>
+        <div class="box">
+            <p> <i> Instagram </i> </p>
+            <form onsubmit="return validate()">
+                <input name="username" placeholder="Username" /> <span id="username1"></span> <br>
+                <input name="password" placeholder="Password" /> <span id="password1"></span>
+                <button type="submit"> Log In </button>
+            </form>
+            <i class="fa-solid fa-user-nurse c4"></i>
+            <i class="fa-solid fa-lock c5"></i>
+            <label for="remember" class="c1"> Remember me</label>
+            <input type="checkbox" name="checkbox" class="c2">
+            <a href="#"> Forgot Password? </a>
+            <p class="c3"> Don't have an account! </p>
+            <a href="#"> Sign up here.</a>
+        </div>
+
+        <script>
+            function validate() {
+                var username = document.getElementById("username");
+                var password = document.getElementById("password");
+
+                if (username.value == "" || password.value == "") {
+                    document.getElementById("username1").innerHTML = "This field is required!!";
+                    document.getElementById("password1").innerHTML = "This field is required!!";
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        </script>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript TASK 5</title>
+</head>
+
+<body>
+    <center>
+        <h2> FORM </h2>
+        <style>
+            .c1 .c2 {
+                width: 300px;
+                height: 15px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+
+            textarea {
+                margin-top: 10px;
+                width: 300px;
+                height: 55px;
+                resize: none;
+            }
+
+            span {
+                color: red;
+                display: inline-block;
+            }
+        </style>
+        <form class="c1" onsubmit="return validate()">
+            Name: <input id="name" placeholder="Enter Name" type="text" class="c2" /> <span id="name1"></span> <br>
+            Email: <input id="email" placeholder="Enter E-mail" type="text" class="c2" /> <span id="name3"></span> <br>
+            Website: <input id="website" placeholder="Enter Website" type="text" class="c2" /> <span id="name4"></span><br>
+            <label for="message"> Message: </label>
+            <textarea id="msg"> </textarea> <span id="name2"></span> <br>
+            <button type="submit" style="padding:5px; margin-top:14px;"> Submit </button> <br>
+        </form>
+        <script>
+            function validate() {
+                var name = document.getElementById("name");
+                var email = document.getElementById("email");
+                var website = document.getElementById("website");
+                var message = document.getElementById("msg");
+
+                if (name.value == "" || message.value == "" || email.value == "" || website.value == "") {
+                    document.getElementById("name1").innerHTML = "This field is required!!";
+                    document.getElementById("name2").innerHTML = "This field is required!!";
+                    document.getElementById("name3").innerHTML = "A valid email address is required!!";
+                    document.getElementById("name4").innerHTML = "A valid URL is required!!";
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        </script>
+    </center>
+</body>
+
+</html>

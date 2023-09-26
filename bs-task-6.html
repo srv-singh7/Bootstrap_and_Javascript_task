@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Bootstrap Task 6</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 align="center">Registration Form</h2>
+        
+        <form class="form m-5">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control border border-danger" id="name" name="name" placeholder="Enter your name" required>
+                <small class="form-text text-danger">Name is required.</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control border border-danger" id="email" name="email" placeholder="Enter your email" required>
+                <small class="form-text text-danger">Email is required.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control border border-danger" id="password" name="password" placeholder="Enter your password" required>
+                <small class="form-text text-danger">Password is required.</small>
+            </div>
+            <div class="form-group">
+                <label for="hobbies">Hobbies:</label>
+                <select class="form-control border " id="hobbies" name="hobbies" required>
+                    <option value="" disabled selected>Select your hobby</option>
+                    <option value="reading">Reading</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="traveling">Traveling</option>
+                    <option value="cooking">Cooking</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-danger">Submit</button>
+        </form>
+    </div>
+
+    >
+</body>
+</html>

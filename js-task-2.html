@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #131111;
+        }
+    </style>
+    <title>Number Reversal</title>
+</head>
+<body>
+    <h2>Alphabetical Sort</h2>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="sortString()">Sort</button>
+    <p id="sortedString"></p>
+
+    <script>
+        function sortString() {
+            const inputElement = document.getElementById("inputString");
+            const sortedStringElement = document.getElementById("sortedString");
+
+            // Get the user's input
+            const input = inputElement.value;
+
+            // Convert the input string to an array of characters, sort it, and join it back into a string
+            const sortedInput = input.split('').sort().join('');
+
+            // Display the sorted string
+            sortedStringElement.textContent = `Sorted String: ${sortedInput}`;
+        }
+     </script>
+</body>
+</html>
